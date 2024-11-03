@@ -1,32 +1,7 @@
-import { GetCookieService } from "@/lib/GetCookiesService"
 import { Orders } from "./components/orders"
-import { api } from "@/services/api"
-import { orderResponse } from "@/@types/orders.type"
+import { GetOrders } from "@/lib/GetOrders"
 
-
-
-export async function GetOrders(): Promise<orderResponse[] | []> {
-
-    try {
-        //pegar o token
-        const token = await GetCookieService()
-
-        //fazer uma request para pegar ás mesas
-        const response = await api.get("/orders", {
-            headers: {
-                Authorization: `Bearer ${token}` // pasar o token de autenticação
-            }
-        })
-
-        return response.data || [] // retorna os dados
-
-    } catch(err) {
-        console.log(err); //retorna o erro caso tenha
-
-        return[]
-    }
-}
-
+export const dynamic = 'force-dynamic';
 
 export default async function Dashboard() {
 
