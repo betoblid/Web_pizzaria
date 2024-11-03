@@ -1,7 +1,6 @@
 import { GetCookieService } from "@/lib/GetCookiesService"
 import { Orders } from "./components/orders"
 import { api } from "@/services/api"
-import { promises } from "dns"
 import { orderResponse } from "@/@types/orders.type"
 
 

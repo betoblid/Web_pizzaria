@@ -1,7 +1,6 @@
 
 import { GetCookieService } from "@/lib/GetCookiesService"
 import { Form } from "./components/form"
-import style from "./style.module.scss"
 import { api } from "@/services/api"
 
 export default async function ProductPage() {
