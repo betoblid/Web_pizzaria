@@ -1,0 +1,17 @@
+
+
+
+.button{
+    height: 40px;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--green-900);
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--white);
+    
+
+    &:disabled{
+        filter: brightness(0.50);
+    }
+}
